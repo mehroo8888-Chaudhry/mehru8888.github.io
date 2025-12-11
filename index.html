@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>My HR Website</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional HR Portfolio</title>
+
 <style>
     body {
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #dce6ff, #f3f7ff);
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom right, #d9e6ff, #f0f7ff);
         margin: 0;
         padding: 20px;
-        animation: fadeIn 1.5s ease-in-out;
+        animation: fadeIn 1.2s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -24,8 +22,9 @@
     h1 {
         text-align: center;
         color: #003399;
-        font-weight: 600;
-        animation: slideDown 1.2s ease;
+        font-size: 32px;
+        margin-bottom: 20px;
+        animation: slideDown 1s ease;
     }
 
     @keyframes slideDown {
@@ -36,61 +35,67 @@
     .box {
         background: white;
         padding: 20px;
-        margin: 20px auto;
         border-radius: 15px;
-        max-width: 800px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        animation: fadeUp 1s ease;
+        margin-bottom: 20px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        animation: fadeInUp 0.8s ease;
     }
 
-    @keyframes fadeUp {
+    @keyframes fadeInUp {
         from { transform: translateY(20px); opacity: 0; }
         to { transform: translateY(0); opacity: 1; }
-    }
-
-    .box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
     video {
         width: 100%;
         border-radius: 12px;
         margin-top: 10px;
-        animation: fadeIn 1s ease;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
 
     ul li {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
-    .contact {
-        font-size: 18px;
-        font-weight: 600;
-        color: #003399;
-        text-align: center;
+    .caption {
+        font-style: italic;
+        margin-top: 10px;
+        color: #444;
     }
 </style>
 </head>
+
 <body>
 
-<h1>Welcome to my professional HR profile 🌿</h1>
+<h1>Welcome to My Professional HR Portfolio 🌿</h1>
 
 <div class="box">
-    <h2>About Me</h2>
-    <p>I am a Human Resources student with a Diploma in Medical Administration. 
-        I enjoy learning new skills, including AI and digital tools. Recently, I have been exploring how to create professional videos and how to write effective prompts. 
-        </p>
+    <h2>About Me – Introduction</h2>
+    <p>I am a <strong>Human Resources student</strong> with a completed <strong>Diploma in Medical Administration</strong>. This background helped me develop strong organizational skills, accuracy and a professional way of working.</p>
+    <p>I love learning new things and growing every day. I am currently learning:</p>
+    <ul>
+        <li>🧠 AI and modern digital tools</li>
+        <li>🎥 How to create professional promotional videos</li>
+        <li>✍️ How to write effective prompts to get high‑quality AI results</li>
+    </ul>
+    <p>The introduction video below is an <strong>AI‑generated sample</strong>, created by me as part of my learning process. It reflects my motivation to grow, be creative and explore new technology within the HR field.</p>
 </div>
 
 <div class="box">
-    <h2>This is an AI-generated introduction sample created as part of my learning journey. 
-        I am motivated, eager to grow, and excited to apply my skills in a real HR environment.</h2>
+    <h2>AI Introduction Video</h2>
     <video controls>
         <source src="myvideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        Your browser does not support video.
     </video>
+</div>
+
+<div class="box">
+    <h2>HR‑Themed AI Video</h2>
+    <video controls>
+        <source src="Hrvid.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+    <p class="caption">This is another AI‑generated video created by me. It represents an HR‑themed environment and is part of my learning process in creating AI promotional content.</p>
 </div>
 
 <div class="box">
@@ -105,11 +110,12 @@
 
 <div class="box">
     <h2>Goals</h2>
-    <p>My goal is to grow into a responsible and professional HR employee who can support employees, improve communication, and help build a positive workplace culture.</p>
+    <p>My goal is to develop into a responsible and professional HR employee who can support employees, improve communication, and promote a healthy and positive workplace. I want to continue building my skills, learn how to apply HR concepts in practice and gain deeper insight into the essential tasks and responsibilities within HR.</p>
 </div>
 
-<div class="box contact">
-    Contact me: mehroo8888@gmail.com
+<div class="box">
+    <h2>Contact</h2>
+    <p>You can contact me at: <strong>mehroo8888@gmail.com</strong></p>
 </div>
 
 </body>
