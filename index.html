@@ -3,119 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional HR Portfolio</title>
-
+<title>My HR Website</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom right, #d9e6ff, #f0f7ff);
-        margin: 0;
-        padding: 20px;
-        animation: fadeIn 1.2s ease-in-out;
-    }
+body {
+    font-family: Arial;
+    background: linear-gradient(to bottom right, #dce9ff, #f3f7ff);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
 
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+.main-content {
+    width: 65%;
+}
 
-    h1 {
-        text-align: center;
-        color: #003399;
-        font-size: 32px;
-        margin-bottom: 20px;
-        animation: slideDown 1s ease;
-    }
+.right-quote {
+    width: 30%;
+    padding: 20px;
+    text-align: right;
+    font-size: 20px;
+    color: #003366;
+    font-style: italic;
+    animation: fadeIn 2s ease-in-out;
+}
 
-    @keyframes slideDown {
-        from { transform: translateY(-20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-    .box {
-        background: white;
-        padding: 20px;
-        border-radius: 15px;
-        margin-bottom: 20px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        animation: fadeInUp 0.8s ease;
-    }
+h1 {
+    color: #003399;
+}
 
-    @keyframes fadeInUp {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
+.box {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    video {
-        width: 100%;
-        border-radius: 12px;
-        margin-top: 10px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    }
+video {
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
 
-    ul li {
-        margin-bottom: 6px;
-    }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
 
-    .caption {
-        font-style: italic;
-        margin-top: 10px;
-        color: #444;
-    }
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.tiktok-link {
+    font-size: 18px;
+    color: #003399;
+    font-weight: bold;
+}
+
 </style>
 </head>
-
 <body>
+<div class="main-content">
+    <h1>Welcome to my professional website. I’m glad you’re here! 🌿</h1>
 
-<h1>Welcome to My Professional HR Portfolio 🌿</h1>
+    <div class="box">
+        <h2>About Me</h2>
+        <p>I am a Human Resources student with a diploma in Medical Administration. I love learning new things — especially AI, creating promotional videos, and writing strong prompts to generate creative content. This website shows samples of my AI-generated HR introduction videos.</p>
+    </div>
 
-<div class="box">
-    <h2>About Me – Introduction</h2>
-    <p>I am a <strong>Human Resources student</strong> with a completed <strong>Diploma in Medical Administration</strong>. This background helped me develop strong organizational skills, accuracy and a professional way of working.</p>
-    <p>I love learning new things and growing every day. I am currently learning:</p>
-    <ul>
-        <li>🧠 AI and modern digital tools</li>
-        <li>🎥 How to create professional promotional videos</li>
-        <li>✍️ How to write effective prompts to get high‑quality AI results</li>
-    </ul>
-    <p>The introduction video below is an <strong>AI‑generated sample</strong>, created by me as part of my learning process. It reflects my motivation to grow, be creative and explore new technology within the HR field.</p>
+    <div class="box">
+        <h2>Introduction Video</h2>
+        <video controls>
+            <source src="myvideo.mp4" type="video/mp4">
+        </video>
+        <p>This is an AI-generated introduction video created by me.</p>
+    </div>
+
+    <div class="box">
+        <h2>HR Concept Video</h2>
+        <video controls>
+            <source src="Hrvid.mp4" type="video/mp4">
+        </video>
+        <p>Another AI-generated video focused on HR themes.</p>
+    </div>
+
+    <div class="box">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="20180402_122802.jpg" alt="Eiffel Tower View">
+            <img src="IMG-20240401-WA0022.jpg" alt="White Flowers Picture">
+            <img src="Snapchat-1620590363.jpg" alt="Cartoon Style Picture">
+            <img src="d7898305653e973d9f81df16b1cf7987.png" alt="Atomium Belgium View">
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>My TikTok</h2>
+        <p>I create TikToks about travelling, food (because eating is my hobby 😄), and motivational speaking — topics like forgiveness, letting go, and building healthy relationships.</p>
+        <a class="tiktok-link" href="https://www.tiktok.com/@aysan_omer?lang=en" target="_blank">Visit my TikTok Profile</a>
+    </div>
 </div>
 
-<div class="box">
-    <h2>AI Introduction Video</h2>
-    <video controls>
-        <source src="myvideo.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-</div>
-
-<div class="box">
-    <h2>HR‑Themed AI Video</h2>
-    <video controls>
-        <source src="Hrvid.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-    <p class="caption">This is another AI‑generated video created by me. It represents an HR‑themed environment and is part of my learning process in creating AI promotional content.</p>
-</div>
-
-<div class="box">
-    <h2>Skills</h2>
-    <ul>
-        <li>Recruitment & Selection</li>
-        <li>Communication & Feedback</li>
-        <li>HR Administration</li>
-        <li>Teamwork</li>
-    </ul>
-</div>
-
-<div class="box">
-    <h2>Goals</h2>
-    <p>My goal is to develop into a responsible and professional HR employee who can support employees, improve communication, and promote a healthy and positive workplace. I want to continue building my skills, learn how to apply HR concepts in practice and gain deeper insight into the essential tasks and responsibilities within HR.</p>
-</div>
-
-<div class="box">
-    <h2>Contact</h2>
-    <p>You can contact me at: <strong>mehroo8888@gmail.com</strong></p>
+<div class="right-quote">
+    "We get life once, we should live it to the fullest.<br>We should do the things that make us happy."
 </div>
 
 </body>
