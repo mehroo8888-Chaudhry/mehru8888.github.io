@@ -3,166 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional HR Portfolio</title>
+<title>Mehroo Chaudhry | HR Portfolio</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    color: #333;
-}
+    :root {
+        --primary-color: #2c3e50; /* Professional Dark Blue */
+        --accent-color: #3498db;  /* HR Blue */
+        --personal-color: #e84393; /* Fun Pink for personal section */
+        --bg-light: #f4f7f6;
+        --white: #ffffff;
+    }
 
-header {
-    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-    text-align: center;
-    padding: 60px 20px;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}
+    body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-light);
+        color: #333;
+        line-height: 1.6;
+    }
 
-header h1 {
-    font-size: 3em;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-}
+    h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 0;
+    }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
+    /* ===== HEADER & TABS ===== */
+    header {
+        background: var(--white);
+        text-align: center;
+        padding: 40px 20px 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 
-.box {
-    background: linear-gradient(135deg, #fdfbfb, #ebedee);
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-.box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
+    header h1 {
+        color: var(--primary-color);
+        font-size: 2.2em;
+        margin-bottom: 5px;
+    }
 
-video {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    position: relative;
-}
+    .subtitle {
+        color: #7f8c8d;
+        margin-bottom: 25px;
+        font-size: 1.1em;
+    }
 
-.video-container {
-    position: relative;
-}
+    .nav-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
 
-.video-container::before {
-    content: '\25BA';
-    position: absolute;
-    font-size: 60px;
-    color: rgba(255,255,255,0.7);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-}
+    .tab-btn {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
+    /* Active State for Professional Tab */
+    .tab-btn.active-pro {
+        background-color: var(--accent-color);
+        color: white;
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    }
 
-.gallery img {
-    width: 100%;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-.gallery img:hover {
-    transform: scale(1.05);
-}
+    /* Active State for Personal Tab */
+    .tab-btn.active-personal {
+        background-color: var(--personal-color);
+        color: white;
+        box-shadow: 0 4px 15px rgba(232, 67, 147, 0.4);
+    }
 
-.quote {
-    font-size: 22px;
-    font-style: italic;
-    text-align: right;
-    padding: 30px;
-    color: #ff6f91;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-}
+    .tab-btn.inactive {
+        background-color: #ecf0f1;
+        color: #7f8c8d;
+    }
 
-.tiktok-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #000;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s;
-    margin-top: 10px;
-}
-.tiktok-button:hover {
-    background: #ff0050;
-    transform: translateY(-3px);
-}
+    .tab-btn:hover {
+        transform: translateY(-2px);
+    }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-}
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    /* ===== LAYOUT ===== */
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 40px auto;
+        min-height: 80vh; /* Keeps footer at bottom */
+    }
 
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-}
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 15px;
-}
+    /* Content Sections */
+    .section-content {
+        display: none; /* Hidden by default */
+        animation: fadeIn 0.6s ease;
+    }
 
-/* ===== ADDED FOR 9:16 VERTICAL VIDEO ===== */
-.vertical-video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 360px;
-    aspect-ratio: 9 / 16;
-    margin: 0 auto;
-}
+    .section-content.active {
+        display: block; /* Show when active */
+    }
 
-.vertical-video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-/* ======================================= */
+    .box {
+        background: var(--white);
+        padding: 40px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        border-left: 5px solid var(--accent-color); /* Professional Accent */
+    }
+
+    /* Special styling for personal boxes */
+    #personal-view .box {
+        border-left: 5px solid var(--personal-color);
+    }
+
+    /* ===== VIDEO & IMAGES ===== */
+    video, img {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+
+    .vertical-video-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 320px; /* Tikok size */
+        margin: 20px auto;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        border-radius: 12px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery img {
+        height: 200px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.03);
+    }
+
+    /* ===== BUTTONS & QUOTES ===== */
+    .tiktok-button {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #000;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-top: 15px;
+    }
+
+    .tiktok-button:hover {
+        background: #FE2C55; /* TikTok Brand Color */
+        transform: translateY(-3px);
+    }
+
+    .quote {
+        font-size: 1.2em;
+        font-style: italic;
+        text-align: center;
+        padding: 40px;
+        color: #7f8c8d;
+        border-top: 1px solid #eee;
+    }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
 </style>
 </head>
@@ -170,96 +219,106 @@ video {
 
 <header>
     <h1>Professional HR Portfolio 🌿</h1>
+    <div class="subtitle">Human Resources Specialist | AI Content Creator</div>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active-pro" onclick="showProfessional()">Professional Portfolio</button>
+        <button class="tab-btn inactive" id="personal-btn" onclick="showPersonal()">Personal Life</button>
+    </div>
 </header>
 
 <div class="container">
 
-    <div class="box fade-in">
-        <h2>About Me</h2>
-        <p>
-            I am a <strong>Human Resources student</strong> with a completed <strong>Diploma in Medical Administration</strong>. 
-            This background helped me develop strong organizational skills, accuracy, and a professional way of working. 
-            I love learning new things and growing every day. I am currently exploring AI, creating promotional videos, 
-            and writing strong prompts to generate creative content. 
-            This website shows samples of my AI-generated HR introduction videos.
-        </p>
-    </div>
+    <div id="professional-view" class="section-content active">
 
-    <div class="box fade-in video-container">
-        <h2>AI Introduction Video</h2>
-        <video controls>
-            <source src="myvideo.mp4" type="video/mp4">
-        </video>
-        <p>This is an AI-generated introduction video created by me.</p>
-    </div>
+        <div class="box">
+            <h2>About Me</h2>
+            <p>
+                I am a <strong>Human Resources student</strong> with a completed <strong>Diploma in Medical Administration</strong>. 
+                This background helped me develop strong organizational skills, accuracy, and a professional way of working. 
+                I am currently exploring AI to streamline HR processes, creating promotional videos, and writing strong prompts to generate creative content.
+            </p>
+        </div>
 
-    <div class="box fade-in video-container">
-        <h2>HR-Themed AI Video</h2>
-        <video controls>
-            <source src="Hrvid.mp4" type="video/mp4">
-        </video>
-        <p>This is another AI-generated video focused on HR themes.</p>
-    </div>
-
-    <div class="box fade-in video-container">
-        <h2>AI Generated Video (New)</h2>
-        <video controls>
-            <source src="Video.mp4" type="video/mp4">
-        </video>
-        <p>This is my new AI-generated HR video.</p>
-    </div>
-
-    <!-- ===== ADDED VERTICAL 9:16 VIDEO ===== -->
-    <div class="box fade-in">
-        <h2>Final Vertical AI Video</h2>
-        <div class="vertical-video-wrapper">
-            <video controls playsinline preload="metadata">
-                <source src="Final Vid.mp4" type="video/mp4">
+        <div class="box">
+            <h2>AI Introduction Video</h2>
+            <video controls>
+                <source src="myvideo.mp4" type="video/mp4">
             </video>
+            <p>An AI-generated introduction video created by me to demonstrate modern onboarding techniques.</p>
         </div>
-        <p>This video is displayed in 9:16 vertical format, perfect for TikTok and mobile viewing.</p>
-    </div>
-    <!-- =================================== -->
 
-    <div class="box fade-in">
-        <h2>AI Generated Image</h2>
-        <img src="IMG-20251212-WA0000.jpg" alt="AI generated HR illustration">
-        <p>This is my new AI-generated HR picture.</p>
-    </div>
-
-    <div class="box fade-in">
-        <h2>AI Insights</h2>
-        <p>
-            AI is advancing rapidly. We can benefit from it but many people might lose jobs due to AI if they don’t learn how to use it effectively.
-            There are many new AI tools, including video and image generators.
-            I am learning them and have already created several videos and images.
-            It is important to know how to write effective prompts, combine videos, and use model-generated images in videos to create professional content.
-        </p>
-    </div>
-
-    <div class="box fade-in">
-        <h2>Photo Gallery</h2>
-        <div class="gallery">
-            <img src="20180402_122802.jpg" onclick="openLightbox(this)">
-            <img src="IMG-20240401-WA0022.jpg" onclick="openLightbox(this)">
-            <img src="Snapchat-1620590363.jpg" onclick="openLightbox(this)">
-            <img src="d7898305653e973d9f81df16b1cf7987.png" onclick="openLightbox(this)">
+        <div class="box">
+            <h2>HR-Themed AI Video</h2>
+            <video controls>
+                <source src="Hrvid.mp4" type="video/mp4">
+            </video>
+            <p>Focused on Human Resources themes and corporate communication.</p>
         </div>
+
+        <div class="box">
+            <h2>AI Generated Video (New)</h2>
+            <video controls>
+                <source src="Video.mp4" type="video/mp4">
+            </video>
+            <p>My latest work in AI video synthesis.</p>
+        </div>
+
+        <div class="box">
+            <h2>Vertical AI Video (Mobile Optimized)</h2>
+            <div class="vertical-video-wrapper">
+                <video controls playsinline>
+                    <source src="Final Vid.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p style="text-align:center; font-size:0.9em; color:#666;">Format 9:16 - Perfect for Social Media Recruitment</p>
+        </div>
+
+        <div class="box">
+            <h2>AI Generated Imagery</h2>
+            <img src="IMG-20251212-WA0000.jpg" alt="AI generated HR illustration">
+            <p>Creating custom visual assets for presentations and branding.</p>
+        </div>
+
+        <div class="box">
+            <h2>Professional Insights</h2>
+            <p>
+                AI is advancing rapidly. HR professionals must adapt to ensure efficiency while maintaining the human touch. 
+                I am mastering tools to write effective prompts, combine multimedia, and use model-generated images to create professional content that stands out.
+            </p>
+        </div>
+
     </div>
 
-    <div class="box fade-in">
-        <h2>My TikTok</h2>
-        <p>
-            I create TikToks about traveling, food, and motivational speaking.
-        </p>
-        <a class="tiktok-button" href="https://www.tiktok.com/@aysan_omer?lang=en" target="_blank">
-            Visit my TikTok Profile
-        </a>
-    </div>
+    <div id="personal-view" class="section-content">
 
-    <div class="quote fade-in">
-        We get life once, we should live it to the fullest.<br>
-        We should do the things that make us happy.
+        <div class="box">
+            <h2>My Life Outside Work ✈️</h2>
+            <p>Welcome to my personal side! When I'm not studying or working on AI projects, I love traveling, exploring new foods, and sharing motivation.</p>
+        </div>
+
+        <div class="box">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <img src="20180402_122802.jpg" onclick="openLightbox(this)">
+                <img src="IMG-20240401-WA0022.jpg" onclick="openLightbox(this)">
+                <img src="Snapchat-1620590363.jpg" onclick="openLightbox(this)">
+                <img src="d7898305653e973d9f81df16b1cf7987.png" onclick="openLightbox(this)">
+            </div>
+        </div>
+
+        <div class="box" style="text-align: center;">
+            <h2>TikTok Content</h2>
+            <p>I create videos about traveling, food, and motivational speaking.</p>
+            <a class="tiktok-button" href="https://www.tiktok.com/@aysan_omer?lang=en" target="_blank">
+                Follow me on TikTok
+            </a>
+        </div>
+
+        <div class="quote">
+            "We get life once, we should live it to the fullest. We should do the things that make us happy."
+        </div>
+
     </div>
 
 </div>
@@ -269,27 +328,36 @@ video {
 </div>
 
 <script>
-function openLightbox(img) {
-    var lb = document.getElementById('lightbox');
-    var lbImg = document.getElementById('lightbox-img');
-    lb.style.display = 'flex';
-    lbImg.src = img.src;
-}
+    // These functions handle switching the buttons and content
+    function showProfessional() {
+        // Hide Personal
+        document.getElementById('personal-view').classList.remove('active');
+        document.getElementById('personal-btn').classList.remove('active-personal');
+        document.getElementById('personal-btn').classList.add('inactive');
 
-const faders = document.querySelectorAll('.fade-in');
-const options = { threshold: 0.3 };
-const observer = new IntersectionObserver(function(entries){
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.animationPlayState = 'running';
-        }
-    });
-}, options);
+        // Show Professional
+        document.getElementById('professional-view').classList.add('active');
+        document.querySelector('.active-pro').classList.remove('inactive');
+    }
 
-faders.forEach(fader => {
-    fader.style.animationPlayState = 'paused';
-    observer.observe(fader);
-});
+    function showPersonal() {
+        // Hide Professional
+        document.getElementById('professional-view').classList.remove('active');
+        document.querySelector('.active-pro').classList.add('inactive');
+
+        // Show Personal
+        document.getElementById('personal-view').classList.add('active');
+        document.getElementById('personal-btn').classList.remove('inactive');
+        document.getElementById('personal-btn').classList.add('active-personal');
+    }
+
+    // Lightbox Logic
+    function openLightbox(img) {
+        var lb = document.getElementById('lightbox');
+        var lbImg = document.getElementById('lightbox-img');
+        lb.style.display = 'flex';
+        lbImg.src = img.src;
+    }
 </script>
 
 </body>
